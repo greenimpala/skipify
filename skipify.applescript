@@ -41,8 +41,7 @@ on shouldAlter(nextUrl, nextPos)
         end if
     end if
 
-
-    if nextUrl = currentUrl then
+    if nextUrl = currentUrl and nextPos ≠ 0 then
         if nextPos < currentPos or nextPos > currentPos + 2 then
             log "Skipped playhead"
             return true
